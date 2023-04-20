@@ -6,14 +6,20 @@ body:
     attributes:
       value: |
         What not to report
-        - Bugs in unofficial builds or anything not downloaded from our official portal
+        - Bugs in unofficial builds or anything not downloaded from our [Official Website](https://get.pixelexperience.org/)
         - Missing Builds
         - Problems with the website
-        - Asking for device support
         - Feature requests
 
         Make sure not to use extra mods when reporting a problem (for example: Magisk)
         If you need help please check our Telegram group at https://t.me/pixelexperiencechat
+  - type: textarea
+    attributes:
+      label: Provide environment information
+      description: Please run `next info` in the root directory of your project and paste the results. You might need to use `npx --no-install next info` if next is not in the current PATH.
+      render: bash
+    validations:
+      required: true
   - type: input
     attributes:
       label: Build date
