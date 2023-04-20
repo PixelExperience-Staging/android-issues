@@ -6,11 +6,11 @@ body:
     attributes:
       value: |
         What not to report
-- Bugs in unofficial builds or anything not downloaded from our official portal
-- Missing Builds
-- Problems with the website
-- Asking for device support
-- Feature requests
+        - Bugs in unofficial builds or anything not downloaded from our official portal
+        - Missing Builds
+        - Problems with the website
+        - Asking for device support
+        - Feature requests
 
 Make sure not to use extra mods when reporting a problem (for example: Magisk)
 
