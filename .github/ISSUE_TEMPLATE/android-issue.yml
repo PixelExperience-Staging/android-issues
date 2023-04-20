@@ -2,17 +2,6 @@ name: Bug Report
 description: Create a bug report for the PixelExperience team
 labels: ['template: bug']
 body:
-  - type: markdown
-    attributes:
-      value: |
-        What not to report
-        - Bugs in unofficial builds or anything not downloaded from our [Official Website](https://get.pixelexperience.org/)
-        - Missing Builds
-        - Problems with the website
-        - Feature requests
-
-        Make sure not to use extra mods when reporting a problem (for example: Magisk)
-        If you need help please check our Telegram group at https://t.me/pixelexperiencechat
   - type: textarea
     attributes:
       label: Provide environment information
