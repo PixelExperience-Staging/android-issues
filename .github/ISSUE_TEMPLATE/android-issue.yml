@@ -1,62 +1,68 @@
 name: Bug Report
-description: File a bug report
-title: "[Bug]: "
-labels: ["bug", "triage"]
-assignees:
-  - octocat
+description: Create a bug report for the PixelExperience team
+labels: ['template: bug']
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        What not to report
+        - Bugs in unofficial builds or anything not downloaded from our [Official Website](https://get.pixelexperience.org/)
+        - Missing Builds
+        - Problems with the website
+        - Feature requests
+
+        Make sure not to use extra mods when reporting a problem (for example: Magisk)
+        If you need help please check our Telegram group at https://t.me/pixelexperiencechat
   - type: input
-    id: contact
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
-  - type: textarea
-    id: what-happened
-    attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: Build Date
+      description: |
+        Anything that can help us identify the build you are using
+        Example: ```PixelExperience_raphael-10.0-20201218-0409-OFFICIAL```
     validations:
       required: true
   - type: dropdown
-    id: version
+    attributes:
+      label: Device
+      multiple: false
+      options:
+        - 'redfin'
+        - 'barbet'
+    validations:
+      required: true
+  - type: dropdown
     attributes:
       label: Version
-      description: What version of our software are you running?
+      multiple: false
       options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+        - 'thirteen'
+        - 'thirteen_plus'
     validations:
       required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
   - type: textarea
-    id: logs
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
-  - type: checkboxes
-    id: terms
+      label: Describe the Bug
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior, please provide a clear description of how to reproduce the issue, based on the linked minimal reproduction. Screenshots can be provided in the issue body below. If using code blocks, make sure that [syntax highlighting is correct](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting) and double check that the rendered preview is not broken.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected Behavior
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Possible Solution
+      description: Not obligatory, but suggest a fix/reason for the bug
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: Before posting the issue go through the steps you've written down to make sure the steps provided are detailed and clear.
